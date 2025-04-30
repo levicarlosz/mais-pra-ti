@@ -49,8 +49,8 @@ node lista-exercicios-1/exercicio-1.js
 
 Substitua `exercicio-1.js` pelo nome do exercício desejado. Exemplos:
 ```bash
-node lista-exercicios/exercicio-5.js    # Executa o exercício 5
-node lista-exercicios/exercicio-12.js   # Executa o exercício 12
+node lista-exercicios-1/exercicio-5.js    # Executa o exercício 5 da lista 1
+node lista-exercicios-2/exercicio-12.js   # Executa o exercício 12 da lista 2
 ```
 
 ---
