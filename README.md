@@ -1,6 +1,6 @@
 ## 🚀 Resolvendo Listas de Exercícios +PraTi & Codifica Edu
 
-Lista de exercícios com os conceitos fundamentais de JavaScript com exercícios práticos! Cada exercício está nomeado de `exercicio-1.js` até `exercicio-15.js` e pode ser executado individualmente.
+Repositório das listas de tarefas com resoluções em JavaScript para os exercícios propostos no curso +PraTI! Cada exercício está nomeado de `exercicio-1.js` até `exercicio-15.js` e pode ser executado individualmente.
 
 ---
 
@@ -30,7 +30,7 @@ git clone https://github.com/levicarlosz/mais-pra-ti.git
 
 Acesse a pasta do projeto:
 ```bash
-cd exercicios
+cd mais-pra-ti
 ```
 
 Instale as dependências:
@@ -44,7 +44,7 @@ npm install
 
 Cada arquivo representa um exercício independente. Para executar:
 ```bash
-node lista-exercicios/exercicio-1.js
+node lista-exercicios-1/exercicio-1.js
 ```
 
 Substitua `exercicio-1.js` pelo nome do exercício desejado. Exemplos:
@@ -58,7 +58,7 @@ node lista-exercicios/exercicio-12.js   # Executa o exercício 12
 ### 📂 Estrutura do Projeto
 ```
 /
-├── lista-exercicios-1/ # Pasta principal dos exercícios
+├── lista-exercicios-1/ # Pasta dos exercícios da lista 01
 │ ├── exercicio-1.js # Exercício 1: Entrada e saída básica
 │ ├── exercicio-2.js # Exercício 2: Operações matemáticas
 │ ├── ...
