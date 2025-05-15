@@ -44,13 +44,13 @@ npm install
 
 Cada arquivo representa um exercício independente. Para executar:
 ```bash
-node lista-exercicios-1/exercicio-1.js
+node src/lista-exercicios-1/exercicio-1.js
 ```
 
 Substitua `exercicio-1.js` pelo nome do exercício desejado. Exemplos:
 ```bash
-node lista-exercicios-1/exercicio-5.js    # Executa o exercício 5 da lista 1
-node lista-exercicios-2/exercicio-12.js   # Executa o exercício 12 da lista 2
+node src/lista-exercicios-1/exercicio-5.js    # Executa o exercício 5 da lista 1
+node src/lista-exercicios-2/exercicio-12.js   # Executa o exercício 12 da lista 2
 ```
 
 ---
@@ -58,19 +58,21 @@ node lista-exercicios-2/exercicio-12.js   # Executa o exercício 12 da lista 2
 ### 📂 Estrutura do Projeto
 ```
 /
-├── lista-exercicios-1/ # Pasta dos exercícios da lista 01
-│ ├── exercicio-1.js # Exercício 1: Entrada e saída básica
-│ ├── exercicio-2.js # Exercício 2: Operações matemáticas
-│ ├── ...
-│ ├── exercicio-5.js # Exercício 5: Funções básicas
-│ └── lista-tarefa-1.md # Lista de tarefas dos exercícios
+├── src/
+│   ├── lista-exercicios-1/             # Exercícios da Lista 01
+│   │   ├── exercicio-01.js             # Exercício 1: Redução do Tempo de Vida de um Fumante
+│   │   ├── ...                         # Exercício 2-14: Todos os Exercícios de 2-14
+│   │   ├── exercicio-15.js             # Exercício 15: Números Pares em Vetor
+│   │   └── lista-tarefas-1.md          # Enunciado da Lista 01
+│   |
+│   └── lista-exercicios-2/             # Exercícios da Lista 02 (em desenvolvimento)
+│       └── lista-tarefas-2.md          # Enunciado da Lista 02
 │
-├── node_modules/ # Dependências do projeto (gerado automaticamente)
-│
-├── .gitignore # Arquivo de configuração do Git
-├── package-lock.json # Versões exatas das dependências
-├── package.json # Configuração do projeto e dependências
-└── README.md # Documentação principal
+├── .gitignore                          # Ignora node_modules, etc.
+├── package.json                        # Configuração do projeto (scripts, dependências)
+├── package-lock.json                   # Registro de versões exatas das dependências
+└── README.md                           # Documentação principal do projeto
+
 ```
 
 ---
@@ -91,9 +93,6 @@ npm install
 - **Erros comuns**:
   - Verifique se você está no diretório correto ao executar os arquivos.
   - Certifique-se de que o nome do arquivo está digitado corretamente (ex: `exercicio-3.js`).
-
-- **Dúvidas?**
-  - Abra uma *issue* no GitHub ou entre em contato com o instrutor.
 
 ---
 
