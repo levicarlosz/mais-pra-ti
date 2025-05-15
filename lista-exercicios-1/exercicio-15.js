@@ -1,13 +1,12 @@
-const prompt = require("prompt-sync")();
-
-const numero = Number(prompt("Digite o número: "));
 let anterior = 0;
 let atual = 1;
-let proximoNumero = null;
 
-for (let i = 0; i < numero; i++) {
+let proximoNumero = 0;
+
+for (let i = 0; i < 10; i++) {
+  console.log(atual);
   proximoNumero = anterior;
+
   anterior = atual;
   atual += proximoNumero;
 }
-console.log(anterior);
