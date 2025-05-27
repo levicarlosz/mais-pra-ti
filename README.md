@@ -49,8 +49,8 @@ node src/lista-exercicios-1/exercicio-1.js
 
 Substitua `exercicio-1.js` pelo nome do exercício desejado. Exemplos:
 ```bash
-node src/lista-exercicios-1/exercicio-5.js    # Executa o exercício 5 da lista 1
-node src/lista-exercicios-2/exercicio-12.js   # Executa o exercício 12 da lista 2
+node src/lista-exercicios-01/exercicio-5.js    # Executa o exercício 5 da lista 1
+node src/lista-exercicios-02/exercicio-12.js   # Executa o exercício 12 da lista 2
 ```
 
 ---
