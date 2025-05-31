@@ -59,14 +59,20 @@ node src/lista-exercicios-02/exercicio-12.js   # Executa o exercício 12 da list
 ```
 /
 ├── src/
-│   ├── lista-exercicios-1/             # Exercícios da Lista 01
+│   ├── lista-exercicios-01/            # Exercícios da Lista 01
 │   │   ├── exercicio-01.js             # Exercício 1: Redução do Tempo de Vida de um Fumante
 │   │   ├── ...                         # Exercício 2-14: Todos os Exercícios de 2-14
 │   │   ├── exercicio-15.js             # Exercício 15: Números Pares em Vetor
-│   │   └── lista-tarefas-1.md          # Enunciado da Lista 01
-│   |
-│   └── lista-exercicios-2/             # Exercícios da Lista 02 (em desenvolvimento)
-│       └── lista-tarefas-2.md          # Enunciado da Lista 02
+│   │   └── lista-tarefas.md            # Enunciado da Lista 01
+│   │
+│   ├── lista-exercicios-01-opicionais/
+│   │   ├── exercicio-01.js             # Exercícios da Lista 01 Opicinal
+│   │   ├── ...                         # Exercícios Restantes
+│   │   ├── exercicio-**.js             # Exercícios Restantes
+│   │   └── lista-tarefas.md            # Enunciado da Lista 01 Opicionais
+│   │
+│   └── lista-exercicios-02/            # Exercícios da Lista 02 (em desenvolvimento)
+│       └── lista-tarefas.md            # Enunciado da Lista 02
 │
 ├── .gitignore                          # Ignora node_modules, etc.
 ├── package.json                        # Configuração do projeto (scripts, dependências)
@@ -92,7 +98,7 @@ npm install
 
 - **Erros comuns**:
   - Verifique se você está no diretório correto ao executar os arquivos.
-  - Certifique-se de que o nome do arquivo está digitado corretamente (ex: `exercicio-3.js`).
+  - Certifique-se de que o nome do arquivo está digitado corretamente (ex: `exercicio-03.js`).
 
 ---
 
