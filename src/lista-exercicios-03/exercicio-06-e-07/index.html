@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lista Exercicio 03</title>
+  </head>
+  <body>
+    <header>
+      <h1>Lista de Exercicio 03</h1>
+      <p>Esse é o exercicio sobre o curso de fullstack junior da +PraTI</p>
+
+      <nav>
+        <button class="hamburger" id="hamburger">&#9776;</button>
+        <ul id="menu">
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#footer">Footer</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="galeria" class="container">
+        <div class="grid-content">
+          <div class="card">
+            <img src="https://picsum.photos/300" alt="" />
+            <p>Imagem 01</p>
+          </div>
+
+          <div class="card">
+            <img src="https://picsum.photos/300" alt="" />
+            <p>Imagem 02</p>
+          </div>
+          <div class="card">
+            <img src="https://picsum.photos/300" alt="" />
+            <p>Imagem 03</p>
+          </div>
+          <div class="card">
+            <img src="https://picsum.photos/300" alt="" />
+            <p>Imagem 04</p>
+          </div>
+          <div class="card">
+            <img src="https://picsum.photos/300" alt="" />
+            <p>Imagem 05</p>
+          </div>
+          <div class="card">
+            <img src="https://picsum.photos/300" alt="" />
+            <p>Imagem 06</p>
+          </div>
+          <div class="card">
+            <img src="https://picsum.photos/300" alt="" />
+            <p>Imagem 07</p>
+          </div>
+          <div class="card">
+            <img src="https://picsum.photos/300" alt="" />
+            <p>Imagem 08</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">Copyright ©</footer>
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const menu = document.getElementById("menu");
+
+      hamburger.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

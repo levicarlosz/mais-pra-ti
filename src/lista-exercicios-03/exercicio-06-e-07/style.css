@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f2f6;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 2rem;
+  font-family: sans-serif;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+header,
+main,
+footer {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid black;
+  outline: 0px solid rgb(9, 109, 202);
+  transition: all 0.1s ease;
+}
+
+header:hover,
+main:hover,
+footer:hover {
+  outline: 4px solid rgb(9, 109, 202);
+  border: 1px solid transparent;
+}
+
+h2 {
+  font-size: 1.7rem;
+  text-decoration: underline;
+}
+
+.destaque {
+  width: fit-content;
+  font-style: italic;
+  color: rgb(9, 109, 202);
+  background-color: rgba(9, 109, 202, 0.164);
+}
+
+#importante {
+  border-top: 4px solid rgb(9, 109, 202);
+}
+
+img {
+  width: 100%;
+  min-width: 80px;
+}
+
+.grid-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+nav {
+  background-color: transparent;
+  overflow: hidden;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  padding: 0.5rem 1rem;
+}
+
+nav ul li a {
+  color: rgb(4, 10, 15);
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  padding: 0;
+  background-color: transparent;
+  color: rgb(4, 10, 15);
+  cursor: pointer;
+  border: none;
+}
+
+@media (max-width: 720px) {
+  .grid-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
