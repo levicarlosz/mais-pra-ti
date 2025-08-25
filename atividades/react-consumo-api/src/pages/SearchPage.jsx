@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { searchMovies } from '../api/omdb';
 import { FavoritesContext } from '../context/FavoritesContext';
+import '../css/SearchPage.css';
 
 export const SearchPage = () => {
     const [query, setQuery] = useState('');
@@ -39,44 +40,40 @@ export const SearchPage = () => {
     const totalPages = Math.ceil(totalResults / 10);
 
     return (
-        <div>
-            <h1>Buscar Filmes</h1>
-            <form onSubmit={handleSearch}>
-                <input
-                    type="text"
-                    placeholder="Digite o nome do filme"
-                    value={query}
-                    onChange={e => setQuery(e.target.value)}
-                />
-                <button type="submit">Buscar</button>
-            </form>
+        <div className="search-container">
+    <h1>Buscar Filmes</h1>
+    <form className="search-form" onSubmit={handleSearch}>
+        <input type="text" placeholder="Digite o nome do filme" value={query} onChange={e => setQuery(e.target.value)} />
+        <button type="submit">Buscar</button>
+    </form>
 
-            {loading && <p>Carregando...</p>}
-            {error && <p style={{color:'red'}}>{error}</p>}
+    {loading && <p>Carregando...</p>}
+    {error && <p style={{color:'red'}}>{error}</p>}
 
+    {movies.map(movie => (
+        <div key={movie.imdbID} className="movie-card">
+            <img src={movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/100x150?text=Sem+Imagem'} alt={movie.Title} />
             <div>
-                {movies.map(movie => (
-                    <div key={movie.imdbID} style={{ border: '1px solid #ccc', margin: 10, padding: 10 }}>
-                        <img src={movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/100x150?text=Sem+Imagem'} alt={movie.Title} style={{width: 100}} />
-                        <h3>{movie.Title} ({movie.Year})</h3>
-                        <Link to={`/movie/${movie.imdbID}`}>Ver detalhes</Link>
-                        <br />
-                        {isFavorite(movie.imdbID) ? (
-                            <button onClick={() => removeFavorite(movie.imdbID)}>Remover dos favoritos</button>
-                        ) : (
-                            <button onClick={() => addFavorite(movie)}>Adicionar aos favoritos</button>
-                        )}
-                    </div>
-                ))}
+                <h3>{movie.Title} ({movie.Year})</h3>
+                <Link to={`/movie/${movie.imdbID}`}>Ver detalhes</Link>
+                <br />
+                {isFavorite(movie.imdbID) ? (
+                    <button className="remove" onClick={() => removeFavorite(movie.imdbID)}>Remover dos favoritos</button>
+                ) : (
+                    <button onClick={() => addFavorite(movie)}>Adicionar aos favoritos</button>
+                )}
             </div>
-
-            {totalPages > 1 && (
-                <div style={{ marginTop: 20 }}>
-                    <button disabled={page <= 1} onClick={e => handleSearch(e, page - 1)}>Anterior</button>
-                    <span style={{ margin: '0 10px' }}>{page} / {totalPages}</span>
-                    <button disabled={page >= totalPages} onClick={e => handleSearch(e, page + 1)}>Próximo</button>
-                </div>
-            )}
         </div>
+    ))}
+
+    {totalPages > 1 && (
+        <div className="pagination">
+            <button disabled={page <= 1} onClick={e => handleSearch(e, page - 1)}>Anterior</button>
+            <span>{page} / {totalPages}</span>
+            <button disabled={page >= totalPages} onClick={e => handleSearch(e, page + 1)}>Próximo</button>
+        </div>
+    )}
+</div>
+
     );
 };

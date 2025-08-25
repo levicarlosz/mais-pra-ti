@@ -4,6 +4,7 @@ import { SearchPage } from './pages/SearchPage';
 import DetailsPage from './pages/DetailsPage';
 import { FavoritesPage } from './pages/FavoritesPage';
 import { FavoritesProvider } from './context/FavoritesContext';
+import './css/App.css';
 
 export const App = () => {
     return (
