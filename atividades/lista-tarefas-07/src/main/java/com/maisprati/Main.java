@@ -1,17 +1,49 @@
 package com.maisprati;
 
+import com.maisprati.models.Produto;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+            try {
+                Produto p1 = new Produto("Notebook Asus", 4500.0, 6);
+                System.out.println("Produto criado: " + p1);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+                p1.setPreco(2999.99);
+                p1.setQuantidadeEmEstoque(15);
+                p1.setNome("Notebook Gamer");
+                System.out.println("Produto atualizado: " + p1);
+
+                System.out.println("\nTestando valores inválidos...");
+
+                try {
+                    p1.setPreco(-100);
+                } catch (IllegalArgumentException e) {
+                    System.out.println("Erro: " + e.getMessage());
+                }
+
+                try {
+                    p1.setQuantidadeEmEstoque(-5);
+                } catch (IllegalArgumentException e) {
+                    System.out.println("Erro: " + e.getMessage());
+                }
+
+                try {
+                    p1.setNome("");
+                } catch (IllegalArgumentException e) {
+                    System.out.println("Erro: " + e.getMessage());
+                }
+
+                try {
+                    Produto p2 = new Produto(null, 100, 1);
+                } catch (IllegalArgumentException e) {
+                    System.out.println("Erro ao criar produto: " + e.getMessage());
+                }
+
+            } catch (Exception e) {
+                System.out.println("Erro inesperado: " + e.getMessage());
+            }
+
     }
 }
